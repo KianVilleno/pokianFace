@@ -1,3 +1,8 @@
+$google-color: (
+  primary: #4285f4,
+  darker: #357ae8,
+);
+
 .custom-button {
   min-width: 165px;
   width: auto;
@@ -19,5 +24,15 @@
     background-color: white;
     color: black;
     border: 1px solid black;
+  }
+
+  &.google-sign-in {
+    background-color: map-get($google-color, primary);
+    color: white;
+
+    &:hover {
+      background-color: map-get($google-color, darker);
+      border: none;
+    }
   }
 }
