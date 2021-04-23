@@ -10,7 +10,7 @@ $google-color: (
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 12px;
   background-color: black;
   color: white;
   text-transform: uppercase;
@@ -19,6 +19,8 @@ $google-color: (
   border: none;
   cursor: pointer;
   transition: background-color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  justify-content: center;
 
   &:hover {
     background-color: white;
@@ -33,6 +35,18 @@ $google-color: (
     &:hover {
       background-color: map-get($google-color, darker);
       border: none;
+    }
+  }
+
+  &.inverted {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      border: 1px solid white;
     }
   }
 }
